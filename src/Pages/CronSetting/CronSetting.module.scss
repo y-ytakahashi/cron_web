@@ -1,0 +1,42 @@
+
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+
+.cronSetting {
+  // height: 100%;
+  // width: 100%;
+  
+  &__header{
+    height: 10vh;
+    background:black;
+
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  &__side {
+    height: 100%;
+    // position: fixed;
+    flex:1 0 auto;
+    flex-basis: 10vw;
+    // border: black 1px solid;
+  }
+  &__content {
+    background:gray;
+    width: 100%;
+    height: 85vh;
+    padding:30px;
+  }
+
+  &__footer {
+    height: auto;
+    background: red;
+    justify-content: flex-end;
+  }
+}

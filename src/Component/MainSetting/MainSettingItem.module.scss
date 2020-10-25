@@ -1,0 +1,32 @@
+
+.MainSettingItem {
+  
+  width: 100%;
+
+  &__card {
+    background-color: white;    
+    margin:10px;
+    padding:10px;
+
+  }
+
+  &__body {
+    display: flex;
+    margin-left: 2%;
+    padding:10px;
+    
+  }
+
+  &__item {
+    flex: 1 0 auto;
+    flex-basis: 80px;
+    align-items: left;
+    flex-direction: row-reverse;
+    
+  }
+  &__title{
+      flex: 0 1 auto;
+      // border: black 1px solid;
+    }
+
+}

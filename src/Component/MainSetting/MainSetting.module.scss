@@ -1,0 +1,20 @@
+
+.MainSetting {
+  width: 100%;
+  height: 100%;
+  background: green;
+  padding: 0 10px;
+
+  
+  &__Wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__area {
+    // border-bottom: black 1px solid;
+    margin-top:10px;
+    padding:10px;
+  }
+
+}

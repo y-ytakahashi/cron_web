@@ -1,0 +1,14 @@
+
+.sideWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  &__item {
+    flex:1;
+    margin: 0 10px;
+    padding-top: 10px;
+
+  }
+}
