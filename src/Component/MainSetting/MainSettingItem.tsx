@@ -1,11 +1,12 @@
 import { promises } from 'fs'
-import React from 'react'
+import React, {useState} from 'react'
 import Style from './MainSettingItem.module.scss'
+import ToggleButton from '../CommonParts/ToggleButton'
 
 const MainSettingItem = (props: any) => {
-  console.log(props)
+  
   const { category, setting_name, setting_params, setting_enable } = props.card_item
-  console.log(setting_params)
+  const [selected, setSelected ] = useState(setting_enable);
   return (
     <div className={Style.MainSettingItem}>
       <div className={Style.MainSettingItem__card}>
@@ -30,7 +31,12 @@ const MainSettingItem = (props: any) => {
               )
             })
           }
-          <div　className={Style.MainSettingItem__item}>{setting_enable}</div>
+          <div　className={Style.MainSettingItem__item}>
+            <ToggleButton 
+              selected={selected}
+              toggleSelected={()=>{setSelected(!selected)}}
+            />
+          </div>
         </div>
       </div>
 

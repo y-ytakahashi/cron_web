@@ -21,7 +21,7 @@ const setting_items = [
       uptime: "09:00",
       down_time: "23:00"
     },
-    setting_enable: true
+    setting_enable: false
   },
   {
     _id: "1",
