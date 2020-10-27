@@ -1,5 +1,11 @@
 # Getting Started with Create React App
 
+# CRON Web 
+
+## 機能一覧
+<作成予定>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
