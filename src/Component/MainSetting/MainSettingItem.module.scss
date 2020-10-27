@@ -24,8 +24,20 @@
     flex-direction: row-reverse;
     
   }
+  &__wrapTitleArea{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+  &__editButton{
+    flex: 1;
+    margin-left: auto;
+    color: red;
+
+  }
   &__title{
-      flex: 0 1 auto;
+      flex: 1 ;
       // border: black 1px solid;
     }
 

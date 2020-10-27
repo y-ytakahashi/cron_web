@@ -10,7 +10,13 @@ const MainSettingItem = (props: any) => {
   return (
     <div className={Style.MainSettingItem}>
       <div className={Style.MainSettingItem__card}>
-        <h2 className={Style.MainSettingItem__title}>{category}</h2>
+        <div className={Style.MainSettingItem__wrapTitleArea}>
+          <div className={Style.MainSettingItem__editButton}>
+            Edit Setting
+          </div>
+          <h2 className={Style.MainSettingItem__title}>{category}</h2>
+          
+        </div>
         <div className={Style.MainSettingItem__body}> 
           <div　className={Style.MainSettingItem__item}>環境名称</div>
           <div　className={Style.MainSettingItem__item}>起動時間</div>
