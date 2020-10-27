@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticRouter } from 'react-router-dom'
 import Style from './MainSetting.module.scss'
 import MainSettingItem from '../MainSetting/MainSettingItem'
+
 const setting_items = [
   {
     _id: "1",

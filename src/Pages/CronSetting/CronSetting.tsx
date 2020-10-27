@@ -14,7 +14,7 @@ const Cronsetting = () => {
           <SideMenu />
         </div>
         <div className={Style.cronSetting__content}>
-          <MainSetting/>
+          <MainSetting/>  
         </div>
       </div>
       <div className={Style.cronSetting__footer}>aaaa</div>
