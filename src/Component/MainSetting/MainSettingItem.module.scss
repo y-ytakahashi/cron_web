@@ -16,12 +16,21 @@
     padding:10px;
     
   }
-
-  &__item {
-    flex: 1 0 auto;
+  &__itemTitle {
+    font-weight: bold;
+    flex: 1;
     flex-basis: 80px;
     align-items: left;
-    flex-direction: row-reverse;
+    padding-bottom: 5px;
+    border-bottom: black 1px solid;
+    
+  }
+  &__itemBody {
+    // font-weight: bold;
+    flex: 1;
+    flex-basis: 80px;
+    align-items: left;
+    
     
   }
   &__wrapTitleArea{

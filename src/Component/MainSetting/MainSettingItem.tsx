@@ -8,7 +8,7 @@ import * as FontAweSome from "@fortawesome/free-regular-svg-icons";
 
 const MainSettingItem = (props: any) => {
   
-  const { category, setting_name, setting_params, setting_enable } = props.card_item
+  const { category, setting_name, instance_name,setting_params, setting_enable } = props.card_item
   const [selected, setSelected ] = useState(setting_enable);
   
   // icon スタイル設定
@@ -25,26 +25,30 @@ const MainSettingItem = (props: any) => {
           
         </div>
         <div className={Style.MainSettingItem__body}> 
-          <div　className={Style.MainSettingItem__item}>環境名称</div>
-          <div　className={Style.MainSettingItem__item}>起動時間</div>
-          <div　className={Style.MainSettingItem__item}>停止時間</div>
-          <div　className={Style.MainSettingItem__item}>設定状況</div>
+          <div　className={Style.MainSettingItem__itemTitle}>環境名称</div>
+          <div　className={Style.MainSettingItem__itemTitle}>インスタンス名称</div>
+          <div　className={Style.MainSettingItem__itemTitle}>起動時間</div>
+          <div　className={Style.MainSettingItem__itemTitle}>停止時間</div>
+          <div　className={Style.MainSettingItem__itemTitle}>設定状況</div>
         </div>
         <div className={Style.MainSettingItem__body}> 
-          <div className={Style.MainSettingItem__item}>
+          <div className={Style.MainSettingItem__itemBody}>
             {setting_name}
+          </div>
+          <div className={Style.MainSettingItem__itemBody}>
+            {instance_name}
           </div>
           
           {
             Object.keys(setting_params).map((item,key)=>{
               return (
-                <div className={Style.MainSettingItem__item}>
+                <div className={Style.MainSettingItem__itemBody}>
                   {setting_params[item]}
                 </div>
               )
             })
           }
-          <div　className={Style.MainSettingItem__item}>
+          <div　className={Style.MainSettingItem__itemBody}>
             <ToggleButton 
               selected={selected}
               toggleSelected={()=>{setSelected(!selected)}}
