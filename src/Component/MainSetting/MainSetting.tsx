@@ -13,6 +13,14 @@ const setting_items = [
       uptime: "09:00",
       down_time: "23:00"
     },
+    week_days:{
+      monday:true,
+      tuesday:true,
+      wednesday:true,
+      friday:true,
+      saturday:true,
+      sunday:true
+    },
     setting_enable: true
   },
   {
@@ -24,6 +32,15 @@ const setting_items = [
       uptime: "09:00",
       down_time: "23:00"
     },
+    week_days:{
+      monday:true,
+      tuesday:true,
+      wednesday:true,
+      friday:true,
+      saturday:true,
+      sunday:true
+    },
+
     setting_enable: false
   },
   {
@@ -35,6 +52,35 @@ const setting_items = [
       uptime: "09:00",
       down_time: "23:00"
     },
+    week_days:{
+      monday:true,
+      tuesday:true,
+      wednesday:true,
+      friday:true,
+      saturday:true,
+      sunday:true
+    },
+
+    setting_enable: true
+  },
+  {
+    _id: "1",
+    category: "EC2",
+    setting_name: "速度検証環境",
+    instance_name:"dev01-dev03",
+    setting_params: {
+      uptime: "09:00",
+      down_time: "23:00"
+    },
+    week_days:{
+      monday:true,
+      tuesday:true,
+      wednesday:true,
+      friday:true,
+      saturday:true,
+      sunday:true
+    },
+
     setting_enable: true
   },
 

@@ -2,11 +2,13 @@
 .MainSettingItem {
   
   width: 100%;
+  min-width: 800px;
 
   &__card {
     background-color: white;    
     margin:10px;
     padding:10px;
+    border-radius: 10px;
 
   }
 
@@ -14,22 +16,27 @@
     display: flex;
     margin-left: 2%;
     padding:10px;
+    border-bottom: black 1px solid;
+    
+    &:nth-child(3){
+      border: none;
+    }
     
   }
   &__itemTitle {
     font-weight: bold;
     flex: 1;
-    flex-basis: 80px;
+    flex-basis: 70px;
     align-items: left;
-    padding-bottom: 5px;
-    border-bottom: black 1px solid;
+    // margin: 0 20px;
     
   }
   &__itemBody {
-    // font-weight: bold;
     flex: 1;
-    flex-basis: 80px;
+    // margin: 0 20px;
+    flex-basis: 70px;
     align-items: left;
+    
     
     
   }

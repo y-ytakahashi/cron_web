@@ -2,8 +2,10 @@ import { promises } from 'fs'
 import React, {useState} from 'react'
 import Style from './MainSettingItem.module.scss'
 import ToggleButton from '../CommonParts/ToggleButton'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as FontAweSome from "@fortawesome/free-regular-svg-icons";
+import MainSettingWeekDay from './MainSettingWeekDay';
 
 
 const MainSettingItem = (props: any) => {
@@ -29,6 +31,7 @@ const MainSettingItem = (props: any) => {
           <div　className={Style.MainSettingItem__itemTitle}>インスタンス名称</div>
           <div　className={Style.MainSettingItem__itemTitle}>起動時間</div>
           <div　className={Style.MainSettingItem__itemTitle}>停止時間</div>
+          <div　className={Style.MainSettingItem__itemTitle}>カレンダー</div>
           <div　className={Style.MainSettingItem__itemTitle}>設定状況</div>
         </div>
         <div className={Style.MainSettingItem__body}> 
@@ -48,6 +51,9 @@ const MainSettingItem = (props: any) => {
               )
             })
           }
+          <div className={Style.MainSettingItem__itemBody}>
+            <MainSettingWeekDay/>
+          </div>
           <div　className={Style.MainSettingItem__itemBody}>
             <ToggleButton 
               selected={selected}
