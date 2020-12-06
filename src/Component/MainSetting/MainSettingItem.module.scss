@@ -1,60 +1,106 @@
+@mixin button {
+  flex: 1;
+  flex-basis: 10px;
+  margin-left: auto;
+  color: gray;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+input {
+  border: none;
+  outline: 0;
+  font-size: 1.1rem;
+  
+  :focus{
+    background-color: red;
+  }
+}
+
+:disabled {
+  background:none
+  
+}
 
 .MainSettingItem {
-  
   width: 100%;
   min-width: 800px;
 
   &__card {
-    background-color: white;    
-    margin:10px;
-    padding:10px;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
     border-radius: 10px;
-
   }
 
   &__body {
     display: flex;
+    width: 100%;
+    align-items: center;
     margin-left: 2%;
-    padding:10px;
+    padding: 10px;
     border-bottom: black 1px solid;
     
-    &:nth-child(3){
+
+    &:nth-child(3) {
       border: none;
     }
-    
   }
   &__itemTitle {
     font-weight: bold;
     flex: 1;
-    flex-basis: 70px;
     align-items: left;
-    // margin: 0 20px;
+    margin-left:10px;
+    min-width:120px;
     
   }
   &__itemBody {
     flex: 1;
-    // margin: 0 20px;
-    flex-basis: 70px;
     align-items: left;
-    
-    
-    
+    margin-left:10px;
+    min-width:120px;
   }
-  &__wrapTitleArea{
+  &__wrapTitleArea {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-right: auto;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
-  &__editButton{
+
+  &__wrappButtonArea {
+    display: flex;
+    flex-direction: row;
+  }
+  &__editButton {
+    @include button;
+  }
+  &__cancelButton {
+    @include button;
+  }
+  &__saveButton {
+    @include button;
+  }
+  &__title {
     flex: 1;
-    margin-left: auto;
-    color:gray;
-
+    // border: black 1px solid;
   }
-  &__title{
-      flex: 1 ;
-      // border: black 1px solid;
-    }
+}
 
+.modalStyle {
+  background: red;
+  width: (100% - 20%);
+  // height: 100%;
+  margin-left: 140px;
+  margin-right: 140px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  bottom: 40px;
+
+  position: absolute;
+  top: 40px;
+
+  overflow-y: scroll;
 }

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAC;EACN,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CAWb;;AATE,AAAD,aAAO,CAAC;EACN,OAAO,EAAE,IAAI;CACd;;AACA,AAAD,YAAM,CAAC;EACL,MAAM,EAAC,GAAG;EACV,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,eAAe;EACvB,aAAa,EAAE,GAAG;CACnB",
+    "sources": [
+        "MainSettingWeekDay.module.scss"
+    ],
+    "names": [],
+    "file": "MainSettingWeekDay.module.css"
+}

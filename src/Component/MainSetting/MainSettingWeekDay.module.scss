@@ -1,3 +1,12 @@
+@mixin day($border:#707070 1px solid) {
+  margin:3px;
+  padding: 1px;
+  border: $border;
+  border-radius: 5px; 
+  background:#707070;
+  color:white;
+  font-weight: bold;
+}
 
 .MSWeel {
   width: 100%;
@@ -7,9 +16,15 @@
     display: flex;
   }
   &__day {
-    margin:3px;
-    padding: 1px;
-    border: black 1px solid;
-    border-radius: 5px;
+    @include day
+
+  }
+  &__trueday {
+    @include day(rgb(35, 191, 35) 2px solid);
+    background: rgb(35, 191, 35);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0,3,5,rgba(0,0,0,0.3);
+    // --webkit-box-shadow:0,3,5,rgba(0,0,0,0.3);
   }
 }

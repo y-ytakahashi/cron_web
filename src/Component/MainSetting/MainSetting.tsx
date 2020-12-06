@@ -1,106 +1,66 @@
-import React from 'react'
-import { StaticRouter } from 'react-router-dom'
+import React, { SetStateAction, useEffect, useState } from 'react'
 import Style from './MainSetting.module.scss'
 import MainSettingItem from '../MainSetting/MainSettingItem'
+import { axiosBase, resSettings } from '../../Api/MainSettings'
 
-const setting_items = [
-  {
-    _id: "1",
-    category: "EC2",
-    setting_name: "速度検証環境",
-    instance_name:"dev01-dev03",
-    setting_params: {
-      uptime: "09:00",
-      down_time: "23:00"
-    },
-    week_days:{
-      monday:true,
-      tuesday:true,
-      wednesday:true,
-      friday:true,
-      saturday:true,
-      sunday:true
-    },
-    setting_enable: true
+
+
+
+interface initialStateType {
+  [name: string]: [string],
+}
+
+interface settinsItems {
+  _id: string,
+  category: string,
+  setting_name: string,
+  instance_name: string,
+  setting_params: {
+    up_time: string,
+    down_time: string,
   },
-  {
-    _id: "1",
-    category: "EC2",
-    setting_name: "速度検証環境",
-    instance_name:"dev01-dev03",
-    setting_params: {
-      uptime: "09:00",
-      down_time: "23:00"
-    },
-    week_days:{
-      monday:true,
-      tuesday:true,
-      wednesday:true,
-      friday:true,
-      saturday:true,
-      sunday:true
-    },
-
-    setting_enable: false
-  },
-  {
-    _id: "1",
-    category: "EC2",
-    setting_name: "速度検証環境",
-    instance_name:"dev01-dev03",
-    setting_params: {
-      uptime: "09:00",
-      down_time: "23:00"
-    },
-    week_days:{
-      monday:true,
-      tuesday:true,
-      wednesday:true,
-      friday:true,
-      saturday:true,
-      sunday:true
-    },
-
-    setting_enable: true
-  },
-  {
-    _id: "1",
-    category: "EC2",
-    setting_name: "速度検証環境",
-    instance_name:"dev01-dev03",
-    setting_params: {
-      uptime: "09:00",
-      down_time: "23:00"
-    },
-    week_days:{
-      monday:true,
-      tuesday:true,
-      wednesday:true,
-      friday:true,
-      saturday:true,
-      sunday:true
-    },
-
-    setting_enable: true
+  week_days: {
+    monday: boolean,
+    tuesday: boolean,
+    wednesday: boolean,
+    friday: boolean,
+    saturday: boolean,
+    sunday: boolean,
   },
 
-]
+}
 
 const MainSetting = () => {
+  const [settings, setSettings] = useState([]);
+
+  const fetchSettings = async () => {
+    const res = await resSettings();
+    console.log({ res })
+    setSettings(res);
+    return res
+  }
+ 
+  useEffect(() => {
+    fetchSettings();
+
+
+  }, [])
+
+  console.log({ settings })
   return (
     <div className={Style.MainSetting}>
       <h2 className={Style.MainSetting_title}>開発サーバー起動設定</h2>
       <div className={Style.MainSetting__Wrap}>
-        
+
         <div className={Style.MainSetting__area}>
-        {
-          setting_items.map((item) => {
-            console.log(item)
-            return (
-              <MainSettingItem card_item={item}/>
-            )
-          })
-        }
+          {
+            settings.map((item, index) => {
+              console.log(item)
+              return (
+                <MainSettingItem key={index} card_item={item} />
+              )
+            })
+          }
         </div>
 
       </div>

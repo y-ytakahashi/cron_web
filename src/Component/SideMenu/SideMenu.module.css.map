@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CAQb;;AANE,AAAD,eAAO,CAAC;EACN,IAAI,EAAC,CAAC;EACN,MAAM,EAAE,MAAM;EACd,WAAW,EAAE,IAAI;CAElB",
+    "sources": [
+        "SideMenu.module.scss"
+    ],
+    "names": [],
+    "file": "SideMenu.module.css"
+}

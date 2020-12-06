@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "SideMenuItemList.module.scss"
+    ],
+    "names": [],
+    "file": "SideMenuItemList.module.css"
+}
